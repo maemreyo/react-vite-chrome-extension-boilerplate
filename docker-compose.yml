@@ -1,0 +1,12 @@
+version: '3'
+services:
+  extension:
+    container_name: extension
+    hostname: extension
+    restart: always
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5173:5173"
